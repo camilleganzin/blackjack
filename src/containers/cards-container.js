@@ -13,10 +13,11 @@ const CardsContainer = ( { cards }) => {
 }
 
 const mapStateToProps = (state) => {
-    const { cards } = state.deckReducer;
+    const { cards, gameStarted } = state.deckReducer;
     
     return {
         cards: cards,
+        gameStarted: gameStarted,
     }
 }
 

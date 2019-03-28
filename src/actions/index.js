@@ -4,7 +4,7 @@ const API_ADDRESS = PROXI_ADDRESS + 'https://deckofcardsapi.com/api/deck';
 
 export const drawCard = () => dispatch => {
     
-    return fetch(`${API_ADDRESS}/new/draw`)
+    return fetch(`${API_ADDRESS}/new/draw/`)
     .then(response => {
       if (response.status !== 200) {
         throw new Error('Unsuccessful request to deckofcardsapi.com')
@@ -28,13 +28,12 @@ export function endTurn() {
 
     return {
         type: 'END_TURN',
-        playerId: 1,
     };
 }
 
-export function resetTable() {
+export function resetGame() {
     
     return {
-        type: 'RESET_TABLE',
+        type: 'RESET_GAME',
     };
 }

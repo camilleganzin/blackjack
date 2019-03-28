@@ -2,7 +2,6 @@ export function getScoresFromCards(cards) {
 
     const dealtCards = cards.flat();
     const cardValue = dealtCards.map(card => card.value);
-
     return calculateScoresFromCardNames(cardValue);
 }
 
@@ -32,7 +31,7 @@ const getScoresFromCardValues = cardValues => {
 }
 
 const getAllPossibleScores = cardValues => {
-
+ 
     const possibleScores = cardValues.reduce((accArray, value, index) => {
 
         if (Array.isArray(value)) {
