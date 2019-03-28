@@ -61,3 +61,21 @@ code {
   background-color: #e74c3c;
   box-shadow: 0px 5px 0px 0px #CE3323;
 }
+
+.App-loader {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 0.25em solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}

@@ -41,10 +41,12 @@ class App extends Component {
         {this.props.score < 21 && !this.props.gameEnded &&
             <a className="App-btn blue" onClick={this.startGame}>{ labelPlay }</a>
         }
-        {!this.props.gameEnded &&
+        {!this.props.gameEnded && this.props.gameStarted &&
             <a className="App-btn orange" onClick={this.endTurn}>Let</a>
         }
-        <a className="App-btn red"onClick={this.resetGame}>{ labelNewGame }</a>
+        {this.props.gameStarted &&
+            <a className="App-btn red"onClick={this.resetGame}>{ labelNewGame }</a>
+        }
     </div>
    </div>
   );
