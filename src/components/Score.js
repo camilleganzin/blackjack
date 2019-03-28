@@ -6,13 +6,13 @@ const Score = ({ score, status, lastScore }) => {
   if (!status) status = null
   
   return (
-    <div>
+    <div className="App-score-container">
       <h3>Score : { score }</h3>
       { lastScore.length >= 1 &&
         <span>Player Score : { lastScore }</span>
       }
       { score &&
-        <div>{ status }</div>
+        <h3>{ status }</h3>
       }
     </div>
       

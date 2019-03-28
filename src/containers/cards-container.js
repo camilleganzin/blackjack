@@ -5,7 +5,7 @@ import Card from '../components/Card'
 const CardsContainer = ( { cards }) => {
     
     return (
-        <div>           
+        <div className="App-cards-container">           
             {cards.map((card, i) => <Card key={i} card={card[0]}/>)}
         </div>
         
