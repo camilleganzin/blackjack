@@ -33,14 +33,20 @@ const getScoresFromCardValues = cardValues => {
 const getAllPossibleScores = cardValues => {
  
     const possibleScores = cardValues.reduce((accArray, value, index) => {
-
+        
         if (Array.isArray(value)) {
             
             let newArray = [];
             
-            accArray.forEach(accValue => {
-                value.forEach(val => newArray.push(val + accValue))    
-            });
+            if (cardValues.filter((value) => {return Array.isArray(value) === false}).reduce((accVal, val) => {return accVal + val}) + 11 <= 21) {
+                accArray.forEach(accValue => {
+                    value.forEach(val => newArray.push(value[1] + accValue))    
+                });
+            } else {
+                accArray.forEach(accValue => {
+                    value.forEach(val => newArray.push(value[0] + accValue))    
+                });
+            }
 
             return newArray;
         }

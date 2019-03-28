@@ -2,6 +2,7 @@ import React from 'react';
 import Loader from './Loader'
 
 const Card = ( { card }) => {
+  
   if (!card) {
     return (
       <Loader />
@@ -14,7 +15,6 @@ const Card = ( { card }) => {
         
     ) 
   }
-  
   
 }
 
